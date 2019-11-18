@@ -1,6 +1,55 @@
 <html>
-    <head>
-    </head>
-    <body>
-    </body>
+
+<head>
+    <title>To Do List</title>
+</head>
+
+<body>
+    <h1>Creating your TO DO list</h1>
+    <h3>Enter items to add to your list in the boxes below:</h3>
+    <form action="/action_page.php" autocomplete="on">
+        <fieldset>
+            <span>
+                <!-- span is used for inline elements and I want the input boxes to be next to each other -->
+                <!-- use <div> for block elements -->
+                <label>Your item</label>
+                <input type="text" placeholder="type your TO DO item here" []/>
+                
+                <label>Due date</label>
+                <input type="date" placeholder="18/11/19" autocomplete="off" [] />
+            </span>
+        </fieldset>
+        <br>
+        <div>
+            <input type="submit" />
+            
+        </div>
+    </form>
+    <!-- I need to have a page or table that the list/input writes to -->
+    <table>
+        <tr>
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Completed</th>
+        </tr>
+        <tr>
+            <!-- I think I've got to have some sort of target here to write the items to the table -->
+            <td>"check for emails from James"</td>
+            <td>"14/11/19"</td>
+            <td><div>
+                    <!-- I want to add a function so that answer is "no" the task gets rescheduled i.e. update the date field    -->
+                    <input type="radio" name="completed" value="yes"> yes
+
+                    <input type="radio" name="completed" value="no"> no
+                </div>
+            </td>
+        </tr>
+        
+    </table>
+    
+    </table>
+    <!-- I do not want to delete tasks completed but store them in a "done" file -->
+
+</body>
+
 </html>
