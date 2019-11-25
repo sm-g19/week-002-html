@@ -1,54 +1,95 @@
 <html>
 
 <head>
+
     <title>To Do List</title>
+
+    <link rel="stylesheet" href="https://github.com/sm-g19/normalize.css/blob/master/normalize.css">
+    <!-- found this normalise.css in git hub - not sure if I'm using it ok i.e. found the relevant part
+    of the package which I forked and copied into this directory and copied link for css file -->
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Kanit&display=swap" rel="stylesheet">
 </head>
+<!-- using info from this page https://www.w3schools.com/html/html_forms.asp which suggesteed the use 
+of the code below to write to another page, but that's a page on a sewrver so I'm trying to do this on a
+separate page for the moment as I don't know how to write to the table on the first page ...
+<form action="/action_page.php">
+  First name:<br>
+  <input type="text" name="firstname" value="Mickey"><br>
+  Last name:<br>
+  <input type="text" name="lastname" value="Mouse"><br><br>
+  <input type="submit" value="Submit">
+</form>  -->
 
 <body>
-    <h1>Creating your TO DO list</h1>
-    <h3>Enter items to add to your list in the boxes below:</h3>
-    <form action="/action_page.php" autocomplete="on">
-        <fieldset>
-            <span>
-                <!-- span is used for inline elements and I want the input boxes to be next to each other -->
-                <!-- use <div> for block elements -->
-                <label>Your item</label>
-                <input type="text" placeholder="type your TO DO item here" []/>
-                
-                <label>Due date</label>
-                <input type="date" placeholder="18/11/19" autocomplete="off" [] />
-            </span>
-        </fieldset>
-        <br>
-        <div>
-            <input type="submit" />
-            
-        </div>
-    </form>
-    <!-- I need to have a page or table that the list/input writes to -->
-    <table>
-        <tr>
-            <th>Task</th>
-            <th>Due Date</th>
-            <th>Completed</th>
-        </tr>
-        <tr>
-            <!-- I think I've got to have some sort of target here to write the items to the table -->
-            <td>"check for emails from James"</td>
-            <td>"14/11/19"</td>
-            <td><div>
-                    <!-- I want to add a function so that answer is "no" the task gets rescheduled i.e. update the date field    -->
-                    <input type="radio" name="completed" value="yes"> yes
+    <h1>Create your TO DO list</h1>
 
-                    <input type="radio" name="completed" value="no"> no
+    <form action="Link_to_table_on_same_page" method="get" target="_self">
+        <!-- at the moment I want to write the to do list to the same page
+             https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a 
+            I think this https://www.w3schools.com/tags/att_input_formmethod.asp
+            might help with writing to another page, but again not sure-->
+        <fieldset>
+            <legend>Enter or update items on your list in the boxes below:</legend>
+            <span class="heading">
+                <label>Your to do item</label>
+                <input type="text" name="toDoItem" placeholder="type your TO DO item here" />
+            </span>
+            <span>
+                &nbsp
+                <!-- I'd like a space beteeen my two input areas as it looks a
+                little cramped at the moment, this doesn't work, maybe margins / padding
+                in the style sheet? -->
+            </span>
+            <span class="heading">
+                <label>Due date</label>
+                <input type="date" name="dueDate" placeholder=18/11/19> </span> </fieldset> <br>
+                <div>
+                    <input type="submit" />
+                    <br>
+                    <input type="submit" formaction="techreturners_course/week-002-html/todotasks.html" value="Submit to another page">
+                    <!-- Is this the way I link to another page? -->
+                    <a href="techreturners_course/week-002-html/todotasks.html"> </div> <br>
+                <div>
+                    <!-- I need to have a page or table that the list/input writes to 
+                        https://www.w3schools.com/tags/tag_table.asp-->
+                    <p>
+                        The list of to do items can be found in this table
+                    </p>
+                    <table>
+                        <tr>
+                            <th>Task</th>
+                            <th>Due Date</th>
+                            <th>Completed</th>
+                        </tr>
+                        <tr>
+                            <td>create CCS sheet</td>
+                            <td>25/11/19</td>
+                            <td>
+                                <!-- the elements in the table at the moment are just placeholders -->
+
+                                <input type="radio" name="completed" value="yes"> yes
+                                <!-- if yes copy to archive file and remove from this file -->
+                                <input type="radio" name="completed" value="no"> no
+                                <!-- if no allow fields to be updated -->
+                            </td>
+                            <!-- I think I've got to have some sort of target here to write the items to 
+                                the table if it's not above
+                            or I need the oninput form event script-->
+
+                            <!-- I want to add a function so that answer is "no" the task gets rescheduled
+                                     i.e. update the date field    -->
+                            <!-- I know we were asked for a delete button function, but I want to be able to save to a
+                                COMPLETED TASKS file to allow them to be logged elsewhere as a record of tasks completed; useful
+                                 for 121s and appraisals and just for yourself to know what you're spending your time on -->
+
+                        </tr>
+                    </table>
                 </div>
-            </td>
-        </tr>
-        
-    </table>
-    
-    </table>
-    <!-- I do not want to delete tasks completed but store them in a "done" file -->
+    </form>
+
+    <!-- I do not want to delete tasks completed but store them in a "done" file or my completedtasks.html
+        page for reasons stated above -->
 
 </body>
 
