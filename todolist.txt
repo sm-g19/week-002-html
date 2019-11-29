@@ -1,0 +1,51 @@
+Notes re what I want to do for to do list
+
+Recreate index page from scratch by
+- using mv command to change old file to draft_index.html
+- use touch command to recreate index.html 
+- setting up boilerplate in new index file
+- set up head by 
+--inserting title
+--linking to css sheets and normalisation and google fonts
+
+- set up body
+-- header 1
+Set up initial input part of page in html
+- form for input
+- fieldset in form - not sure why I'm using this, I've forgotten
+- legend for instructions
+- input types: text for task, date for due date
+- create submit button - can I get the text on the button to read "Add to list"?
+
+Then create a list of the to do items (initially this was in a table but then we learnt about responsive design so converted to a list so that I could think about containers.
+Set up list for completed tasks too
+- these will have similar structures but will be pulling in data from different places
+
+Adding in Bootstrap to index.html so can use responsive design into <head> before other style sheets, info herehttps://getbootstrap.com/docs/4.3/getting-started/introduction/
+N.B. adding the Bootstrap link has removed the box line around my input area
+Components
+- updating my buttons
+-- submit button
+-- done/update choice so radio
+
+Containers
+"Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time)." https://getbootstrap.com/docs/4.3/layout/overview/#containers
+so that means that the input box could be fluid to keep it along the top always - N.B. may need to change to responsive as design moves on otherwise input fields will be tiny in some cases
+
+
+
+
+CSS sheet
+1. set background colours and font
+2. create heading class
+3. create style elements for label, legend, paragraph
+4. putting the font style in the body attributes means that all text picks up that style and then I modify for each heading and other items 
+5. set up a button class - use "danger" button as it's red
+
+
+I need a delete button which uses a function. My button will be called remove as the content to be removed will be sent to a DONE page with that day's date
+will also need an UPDATE button which will return task to the input form to have the date updated
+
+convert table code to containers
+
+set class values for the inputs - do these need to be changed to outputs, which then get sent to a container called "To Do List"
