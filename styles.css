@@ -8,7 +8,6 @@ body {
 .container {
     background-color: seashell;
 }
-
 /* Kanit is a google font, info found here https://github.com/sm-g19/webfontloader I've discovered that
 if I put it in the body it will pick it up for all elements*/
 }

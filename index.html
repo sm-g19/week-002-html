@@ -19,85 +19,90 @@
     <h1>My To Do List</h1>
     <!-- container to hold the imput items, colour controlled by syle sheet .container class-->
     <div class="container">
-        <form>
-            <fieldset>
-                <legend>Enter or update items on your list in the boxes below:</legend>
-                <span class="heading">
-                    <label>Your to do item</label>
-                    <input type="text" name="toDoItem" placeholder="type your TO DO item here" />
-                </span>
-                <span class="heading">
-                    <label>Due date</label>
-                    <input type="date" name="dueDate" placeholder="18/11/19">
-                </span>
-            </fieldset>
-        </form>
-        <!-- submit button replaced by bootsrap button, 2 ways of doing it, using the "danger button"
-        as it forces it to be red, could use other colour -->
-        <button type="button" class="btn btn-danger">Add to list</button>
-        <!-- this also works but won't be picked up by screen readers in the same way
-            <input class="btn btn-danger" type="button" value="Add"> -->
-    </div>
-    <br>
-    <br>
-    <!--this is the space for the actual task list  -->
-    <span>
-        <h2>Task list</h2>
-    </span>
-    <div class="container">
-        
         <div class="row">
-            <div class="col-6">
-                first task details
+            <legend>Enter or update items on your list in the boxes below:</legend>
+            <div class="col-12 col-sm-6">
+                <label>Your to do item</label>
+                <input type="text" name="toDoItem" placeholder="type your TO DO item here" />
             </div>
-            <div class="col-2">
-                due date
+            <div class="col-12 col-sm-4">
+                <label>Due date</label>
+                <input type="date" name="dueDate" placeholder="18/11/19">
             </div>
-            <div class="col-2">
-                <button type="button" class="btn btn-outline-success">Done</button>
-            </div>
-            <div class="col-2">
-                <button type="button" class="btn btn-outline-primary">Update</button>
+            <div class="col-12 col-sm-2">
+                <button type="button" class="btn btn-danger">Add</button>
             </div>
         </div>
+        <!-- submit button replaced by bootsrap button, 2 ways of doing it, using the "danger button"
+            as it forces it to be red, could use other colour -->
     </div>
-    <!-- not sure if this code needs repeating for each task item -->
-    <!-- leaving lists in at the moment so can demonstrate change from table to list -->
-    <ul>
-        <li>check ICED abstract deadline, 26/11/19, done/update</li>
-        <!-- I've put these buttons in as I'm trying to allow options for each item - not 
-            sure at the moment whether this is html codable or javascript, see notes below -->
+    <br>
+    <div>
+        <!--this is the space for the actual task list  -->
+        <h2>This is your task list</h2>
+        <div class="container">
+            <div class="row">
+                <legend>Log tasks as done or needing update as needed</legend>
+                <div class="col-12 col-sm-5">
+                    <label>Task details</label>
+                    <ul>
+                        <li>read through notes</li>
+                        <li>write list</li>
+                        <li>create app diagram</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <label>Due date</label>
+                    <ul>
+                        <li>12/11/19</li>
+                        <li>13/11/19</li>
+                        <li>20/11/19</li>
+                    </ul>
+                </div>
+                <div class="col-12 col-sm-2">
+                    <Label>Done: Y/N</Label>
+                    <!-- yes send to completed list, no send back to input box to be resubmitted
+                    and reassigned a date to be completed -->
+                    <div class="radio-inline">
+                        <label><input type="radio" name="optradio" checked>Y</label>
+                        <label><input type="radio" name="optradio">N</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <!-- Reminder of alternative buttons intially used eg
         <button type="button" class="btn btn-outline-success">Done</button>
         <button type="button" class="btn btn-outline-primary">Update</button>
-        <li>write up notes, 27/11/19, not done/update</li>
-        <li>learn css, 25/11/19, done/update</li>
-        <!-- NB the done/ update choices will be buttons and trigger something happening, 
-            the update one will return to the input box to have the date updated -->
-        <!-- <input class= button> -->
-    </ul>
+        NB the done/ update choices will be buttons and trigger something happening, 
+        the update one will return the task to the input box to have the date updated
+        the done will send the item to the "completed tasks" list, with the date field,
+        for future reference  -->
     </div>
     <br>
-    <span>
-        <h2>Completed tasks</h2>
-    </span>
+    <h2>This is where completed tasks are logged</h2>
     <div class="container">
-        <div class="col">
-            next to oldest task details
-        </div>
-        <div class="col">
-            oldest completed task details plus date completed
+        <div class="row">
+            <div class="col-12 col-sm-6">
+                <label>Task details</label>
+                <ul>
+                    <li>last item completed</li>
+                    <li>penultimate item completed</li>
+                    <li>second item completed</li>
+                    <li>first item completed</li>
+                </ul>
+            </div>
+            <div class="col-12 col-sm-6">
+                <label>Date completed</label>
+                <ul>
+                    <li>18/11/16</li>
+                    <li>26/11/19</li>
+                    <li>11/11/19</li>
+                </ul>
+            </div>
         </div>
     </div>
-    <br>
-    <div class="container">
-        <!-- This is the bare bones of DONE TASKS, I've swapped my table for lists
-        eventually it would be good to have the done list sent to an archive page -->
-        <ul>
-            <li>write inclusive culture report, 18/11/16</li>
-            <li>return library book, 26/11/19</li>
-            <li>completed command line tasks, 11/11/19</li>
-        </ul>
-    </div>
+
 </body>
 
 </html>

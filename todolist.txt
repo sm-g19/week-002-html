@@ -32,7 +32,11 @@ Containers
 "Containers are the most basic layout element in Bootstrap and are required when using our default grid system. Choose from a responsive, fixed-width container (meaning its max-width changes at each breakpoint) or fluid-width (meaning it’s 100% wide all the time)." https://getbootstrap.com/docs/4.3/layout/overview/#containers
 so that means that the input box could be fluid to keep it along the top always - N.B. may need to change to responsive as design moves on otherwise input fields will be tiny in some cases
 
+There are embedded capabilities that you get with Bootstrap which took me to these Flexbox notes https://css-tricks.com/snippets/css/a-guide-to-flexbox/#flexbox-background Note: Flexbox layout is most appropriate to the components of an application, and small-scale layouts, while the Grid layout is intended for larger scale layouts.
 
+Grid info is here https://getbootstrap.com/docs/4.3/layout/grid/
+
+ 
 
 
 CSS sheet
